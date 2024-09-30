@@ -12,6 +12,23 @@ public class Driver{
             System.out.println("1 is a root of s");
         else
             System.out.println("1 is not a root of s");
+
+        double[] coeffs1 = {3, 2, 5}; // Represents 3 + 2x + 5x^2
+        double[] coeffs2 = {4, -1}; // Represents 4 - x
+        int[] exps2 = {0, 1}; // Custom exponents for second polynomial
+
+        Polynomial poly1 = new Polynomial(coeffs1);
+        Polynomial poly2 = new Polynomial(coeffs2, exps2);
+
+        Polynomial sum = poly1.add(poly2);
+        Polynomial product = poly1.multiply(poly2);
+
+        System.out.println("Sum:");
+        sum.saveToFile();
+
+        System.out.println("Product:");
+        product.saveToFile();
+    
     }
 }
 
